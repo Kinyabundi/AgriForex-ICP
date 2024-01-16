@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "cropcontract_backend": {
+      "candid": "src/cropcontract_backend/cropcontract_backend.did",
+      "package": "cropcontract_backend",
+      "type": "rust"
+    },
+    "cropcontract_frontend": {
+      "dependencies": [
+        "cropcontract_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/cropcontract_frontend/src/index.html"
+      },
+      "source": [
+        "src/cropcontract_frontend/assets",
+        "dist/cropcontract_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

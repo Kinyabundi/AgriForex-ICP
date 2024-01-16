@@ -1,0 +1,4 @@
+[workspace]
+members = [
+    "src/cropcontract_backend",
+]
