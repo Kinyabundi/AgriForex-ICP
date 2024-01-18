@@ -76,6 +76,7 @@ service : {
   add_farmer : (FarmerPayload) -> (opt Farmer);
   get_all_crop_contracts : () -> (vec CropContract) query;
   get_buyer : (nat64) -> (Result_1) query;
+  get_buyer_by_principal : (principal) -> (Result_1) query;
   get_contracts_by_buyer : (principal) -> (vec CropContract) query;
   get_contracts_by_contract_status : (ContractStatus) -> (
       vec CropContract,
@@ -83,4 +84,6 @@ service : {
   get_contracts_by_farmer : (nat64) -> (vec CropContract) query;
   get_crop_contract : (nat64) -> (Result) query;
   get_farmer : (nat64) -> (Result_2) query;
+  get_farmer_by_principal : (principal) -> (Result_2) query;
+  get_principal : () -> (principal) query;
 }

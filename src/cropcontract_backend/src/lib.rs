@@ -184,6 +184,12 @@ static STORAGE: RefCell<StableBTreeMap<u64, Farmer, Memory>> =
     match_get_farmer(&id).ok_or_else(|| format!("Farmer with id={} not found", id))
 }
 
+//get farmer by principal
+#[ic_cdk::query]
+ fn get_farmer_by_principal(principal: Principal) -> Result<Farmer, String> {
+    STORAGE.with(|service| service.borrow().iter().map(|(_key, value)| value.clone()).find(|farmer| farmer.principal == principal).ok_or_else(|| format!("Farmer with principal={} not found", principal)))
+}
+
 // create a new farmer
 #[ic_cdk::update]
  fn add_farmer(payload: FarmerPayload) -> Option<Farmer> {
@@ -227,6 +233,11 @@ fn match_get_farmer(id: &u64) -> Option<Farmer> {
     match_get_buyer(&id).ok_or_else(|| format!("Buyer with id={} not found", id))
 }
 
+//get buyer by principal
+#[ic_cdk::query]
+ fn get_buyer_by_principal(principal: Principal) -> Result<Buyer, String> {
+    BUYER_STORAGE.with(|service| service.borrow().iter().map(|(_key, value)| value.clone()).find(|buyer| buyer.principal == principal).ok_or_else(|| format!("Buyer with principal={} not found", principal)))
+}
 //create a new buyer
 #[ic_cdk::update]
  fn add_buyer(payload: BuyerPayload) -> Option<Buyer> {
@@ -333,6 +344,12 @@ fn match_get_crop_contract(id: &u64) -> Option<CropContract> {
     crop_contract.buyer = Some(ic_cdk::caller());
     do_insert_crop_contract(&crop_contract);
     Ok(crop_contract)
+}
+
+// get principal
+#[ic_cdk::query]
+ fn get_principal() -> Principal {
+    ic_cdk::caller()
 }
 
 
