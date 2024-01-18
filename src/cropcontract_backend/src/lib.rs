@@ -335,6 +335,7 @@ fn match_get_crop_contract(id: &u64) -> Option<CropContract> {
     Ok(crop_contract)
 }
 
+
 ic_cdk::export_candid!();
 
 
