@@ -31,6 +31,10 @@ Data Storage
 Data, including farmers, buyers, and crop contracts, is stored in stable structures using the provided StableBTreeMap and memory management system.
 The system uses thread-local storage to manage memory and IDs for different types of data.
 
+
+![image](https://github.com/Kinyabundi/AgriForex-ICP/assets/75924698/cdc67b0e-a61f-4828-a7a7-b08e7f80816f)
+
+
 ## Running the project locally
 
 If you want to test your project locally, you can use the following commands:
