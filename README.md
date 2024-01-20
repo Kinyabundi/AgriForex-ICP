@@ -32,6 +32,11 @@ Data, including farmers, buyers, and crop contracts, is stored in stable structu
 The system uses thread-local storage to manage memory and IDs for different types of data.
 
 
+### HomePage
+
+![image](https://github.com/Kinyabundi/AgriForex-ICP/assets/75924698/3dde522e-df0f-4a46-929d-7d5e8e6108f7)
+
+
 ![image](https://github.com/Kinyabundi/AgriForex-ICP/assets/75924698/cdc67b0e-a61f-4828-a7a7-b08e7f80816f)
 
 ![image](https://github.com/Kinyabundi/AgriForex-ICP/assets/75924698/2f1d1fd0-d475-42f8-81cf-8befe892a433)
