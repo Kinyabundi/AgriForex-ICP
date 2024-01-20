@@ -1,25 +1,35 @@
-# cropcontract
+### AgriForex
+## Overview
+This project is a smart contract system built on the Internet Computer (IC) platform to manage crop contracts between farmers and buyers. The system allows farmers to create contracts for their crops, buyers to review and accept these contracts and provides a transparent and secure way to track the status of these agreements.
 
-Welcome to your new cropcontract project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
-
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
-
-To learn more before you start working with cropcontract, see the following documentation available online:
-
-- [Quick Start](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-locally)
-- [SDK Developer Tools](https://internetcomputer.org/docs/current/developer-docs/setup/install)
-- [Rust Canister Development Guide](https://internetcomputer.org/docs/current/developer-docs/backend/rust/)
-- [ic-cdk](https://docs.rs/ic-cdk)
-- [ic-cdk-macros](https://docs.rs/ic-cdk-macros)
-- [Candid Introduction](https://internetcomputer.org/docs/current/developer-docs/backend/candid/)
-
-If you want to start working on your project right away, you might want to try the following commands:
-
-```bash
-cd cropcontract/
-dfx help
-dfx canister --help
-```
+## Components
+1. Farmer Struct
+Represents a farmer with essential details such as name, contact information, land size, and more.
+Stored in a stable structure for efficient retrieval and management.
+2. Buyer Struct
+Represents a buyer who purchases crops from farmers.
+Contains details like name, contact information, and organization (optional).
+Also stored in a stable structure for data consistency.
+3. CropContract Struct
+Represents a contract between a farmer and a buyer for a specific crop.
+Includes details such as land size, expected yield, price per unit, and contract status.
+Utilizes an enum type (ContractStatus) to track the status of the contract (e.g., Active, Pending, Inactive).
+Usage
+1. Adding a Farmer
+Farmers can be added to the system by calling the add_farmer function and providing relevant information about the farmer in the FarmerPayload struct.
+2. Adding a Buyer
+Buyers can be added using the add_buyer function. Similar to adding farmers, buyers provide their details in the BuyerPayload struct.
+3. Creating a Crop Contract
+Farmers initiate crop contracts through the add_crop_contract function, specifying details in the CropContractPayload struct.
+Contracts start with a status of "Pending" and require buyer acceptance.
+4. Accepting a Crop Contract
+Buyers can accept pending contracts using the accept_contract function by providing the contract ID.
+This updates the contract status to "Active" and records the buyer's information.
+5. Querying Information
+Various query functions (get_farmer, get_buyer, get_crop_contract, etc.) allow users to retrieve information based on IDs, principals, or other criteria.
+Data Storage
+Data, including farmers, buyers, and crop contracts, is stored in stable structures using the provided StableBTreeMap and memory management system.
+The system uses thread-local storage to manage memory and IDs for different types of data.
 
 ## Running the project locally
 
