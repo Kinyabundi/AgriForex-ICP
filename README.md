@@ -31,6 +31,12 @@ Data Storage
 Data, including farmers, buyers, and crop contracts, is stored in stable structures using the provided StableBTreeMap and memory management system.
 The system uses thread-local storage to manage memory and IDs for different types of data.
 
+### Crop Analyzer AI
+Analyze the crop image and get deficits.
+To allow farmer make decision about their contracts
+
+![Uploading image.png…]()
+
 
 ### HomePage
 
