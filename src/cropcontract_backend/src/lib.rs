@@ -222,7 +222,7 @@ fn do_insert_farmer(farmer: &Farmer) {
 }
 
 
-// a helper method to get a message by id. used in get_message
+// a helper method to get a farmer by id. used in get_farmer
 fn match_get_farmer(id: &u64) -> Option<Farmer> {
     STORAGE.with(|service| service.borrow().get(id))
 }

@@ -1,0 +1,40 @@
+/* Emmanuel Haggai Technologies
+   Author: Emmanuel Haggai
+   Version: 1.3.0
+   File Description: Main Css file for SakaGPT Onchain AI
+*/
+.text-primary,
+.navbar-custom.navbar-light .navbar-nav li.active a,
+.navbar-custom.navbar-light .navbar-nav li a:hover,
+.navbar-custom.navbar-light .navbar-nav li a:focus,
+.navbar-custom.navbar-light .navbar-nav li a:active{
+    color: #f2b31a !important;
+}
+
+.bg-primary,
+.btn-primary,
+.home-carousel .carousel-indicators li,
+.farmers-social li a:hover,
+.contact-border,
+.back-to-top:hover {
+    background-color: #f2b31a !important;
+}
+
+.btn-primary,
+.registration-input-box:focus,
+.form-control:focus,.farmers-social li a:hover  {
+    border-color: #f2b31a ;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover,
+.open > .dropdown-toggle.btn-primary {
+    border-color: #e8ad1e;
+    background-color: #e8ad1e;
+}

@@ -2,3 +2,5 @@
 members = [
     "src/cropcontract_backend",
 ]
+
+resolver="2"

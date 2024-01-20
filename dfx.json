@@ -5,6 +5,10 @@
       "package": "cropcontract_backend",
       "type": "rust"
     },
+    "internet_identity" : {
+      "type": "pull",
+      "id": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+    },
     "cropcontract_frontend": {
       "dependencies": [
         "cropcontract_backend"
