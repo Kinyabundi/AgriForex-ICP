@@ -1,6 +1,6 @@
 ### AgriForex
 ## Overview
-This project is a smart contract system built on the Internet Computer (IC) platform to manage crop contracts between farmers and buyers. The system allows farmers to create contracts for their crops, buyers to review and accept these contracts and provides a transparent and secure way to track the status of these agreements.
+This project is a DAPP  built on the Internet Computer (IC) platform to manage crop contracts between farmers and buyers. The system allows farmers to create contracts for their crops, buyers to review and accept these contracts and provides a transparent and secure way to track the status of these agreements.
 
 ## Components
 1. Farmer Struct
